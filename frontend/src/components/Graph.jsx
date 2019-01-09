@@ -89,7 +89,7 @@ class Graph extends React.Component {
     let exp11 = 0;
     let exp12 = 0;
 
-    axios.get('https://proper-t-express.herokuapp.com/rentals/groupxyear', {
+    axios.get('http://localhost:3001/rentals/groupxyear', {
       headers: { 'x-access-token': sessionStorage.getItem('jwt_token') },
     }).then((response) => {
       for (let i = 0; i < response.data.length; i += 1) {

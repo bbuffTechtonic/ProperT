@@ -18,7 +18,7 @@ class NavBar extends React.Component {
       modal: false,
       collapsed: true,
     };
-    this.loginURI = 'https://proper-t-express.herokuapp.com/auth/';
+    this.loginURI = 'http://localhost:3001/auth/';
   }
 
   componentDidUpdate(prevProps) {
@@ -75,7 +75,7 @@ class NavBar extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     axios({
-      url: 'https://proper-t-express.herokuapp.com/rentals',
+      url: 'http://localhost:3001/rentals',
       method: 'post',
       headers: {
         'x-access-token': sessionStorage.getItem('jwt_token'),

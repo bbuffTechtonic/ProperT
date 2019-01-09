@@ -33,7 +33,7 @@ class Dashboard extends React.Component {
   }
 
   getDistinctYears = () => {
-    axios.get('https://proper-t-express.herokuapp.com/rentals/years', {
+    axios.get('http://localhost:3001/rentals/years', {
       headers: { 'x-access-token': sessionStorage.getItem('jwt_token') },
     }).then((response) => {
       this.setState({ years: response.data });
@@ -61,7 +61,7 @@ class Dashboard extends React.Component {
     let totIncome = 0;
     // let oYear;
 
-    axios.get('https://proper-t-express.herokuapp.com/rentals/groupxyear', {
+    axios.get('http://localhost:3001/rentals/groupxyear', {
       headers: { 'x-access-token': sessionStorage.getItem('jwt_token') },
     }).then((response) => {
       for (let i = 0; i < response.data.length; i += 1) {
@@ -83,7 +83,7 @@ class Dashboard extends React.Component {
   }
 
   exportExpenses() {
-    axios.get('https://proper-t-express.herokuapp.com/rentals/exporttocsv', {
+    axios.get('http://localhost:3001/rentals/exporttocsv', {
       headers: { 'x-access-token': sessionStorage.getItem('jwt_token') },
     }).then((response) => {
       this.setState({ exports: response.data });

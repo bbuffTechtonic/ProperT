@@ -52,7 +52,7 @@ class ExpenseDetails extends Component {
     this.setState({ searchInput: '' });
     this.selectedCheckboxes.forEach((id) => {
       axios({
-        url: `https://proper-t-express.herokuapp.com/rentals/expenses/${id}`,
+        url: `http://localhost:3001/rentals/expenses/${id}`,
         method: 'delete',
         headers: {
           'x-access-token': sessionStorage.getItem('jwt_token'),
@@ -98,7 +98,7 @@ class ExpenseDetails extends Component {
     selectedExpense === 'All'
       ? this.getAllExpenses()
       : axios({
-        url: `https://proper-t-express.herokuapp.com/rentals/${id}/expenses/${currentYear}/${selectedExpense}`,
+        url: `http://localhost:3001/rentals/${id}/expenses/${currentYear}/${selectedExpense}`,
         headers: {
           'x-access-token': sessionStorage.getItem('jwt_token'),
         },
@@ -113,8 +113,8 @@ class ExpenseDetails extends Component {
     let url;
     // eslint-disable-next-line no-unused-expressions
     searchValue
-      ? url = `https://proper-t-express.herokuapp.com/rentals/${id}/expenses/${currentYear}?description=${searchValue}`
-      : url = `https://proper-t-express.herokuapp.com/rentals/${id}/expenses/${currentYear}`;
+      ? url = `http://localhost:3001/rentals/${id}/expenses/${currentYear}?description=${searchValue}`
+      : url = `http://localhost:3001/rentals/${id}/expenses/${currentYear}`;
     axios({
       url,
       headers: {
@@ -162,7 +162,7 @@ class ExpenseDetails extends Component {
     e.preventDefault();
     const { dataset: { rental } } = e.target;
     axios({
-      url: `https://proper-t-express.herokuapp.com/rentals/${rental}/expenses/${e.target[1].value}`,
+      url: `http://localhost:3001/rentals/${rental}/expenses/${e.target[1].value}`,
       method: 'post',
       headers: {
         'x-access-token': sessionStorage.getItem('jwt_token'),
@@ -185,7 +185,7 @@ class ExpenseDetails extends Component {
 
   getAllYears = () => {
     const { rental: { _id: id } } = this.props;
-    axios.get(`https://proper-t-express.herokuapp.com/rentals/${id}/years`, {
+    axios.get(`http://localhost:3001/rentals/${id}/years`, {
       headers: {
         'x-access-token': sessionStorage.getItem('jwt_token'),
       },

@@ -11,7 +11,7 @@ import {
 class AccountManagement extends React.Component {
   constructor(props) {
     super(props);
-    this.url = 'https://proper-t-express.herokuapp.com/user';
+    this.url = 'http://localhost:3001/user';
     this.state = {
       editFirstName: '',
       editLastName: '',

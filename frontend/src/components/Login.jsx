@@ -12,7 +12,7 @@ class Login extends React.Component {
   constructor(props) {
     super(props);
     const hasForgotPassToken = this.getForgotPassToken();
-    this.loginURI = 'https://proper-t-express.herokuapp.com/auth';
+    this.loginURI = 'http://localhost:3001/auth';
     this.state = {
       landingCard: [!hasForgotPassToken, false, false, hasForgotPassToken],
     };
@@ -107,7 +107,7 @@ class Login extends React.Component {
       return;
     }
 
-    axios('https://proper-t-express.herokuapp.com/user/put', {
+    axios('http://localhost:3001/user/put', {
       method: 'put',
       headers: { 'x-access-token': sessionStorage.getItem('reset_pass_token') },
       data: {

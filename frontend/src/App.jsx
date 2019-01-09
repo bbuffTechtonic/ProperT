@@ -42,7 +42,7 @@ class App extends Component {
   }
 
   checkTokenStatus = () => {
-    axios.get('https://proper-t-express.herokuapp.com/auth/verify', {
+    axios.get('http://localhost:3001/auth/verify', {
       headers: { 'x-access-token': sessionStorage.getItem('jwt_token') },
     })
       // eslint-disable-next-line no-console
@@ -63,7 +63,7 @@ class App extends Component {
   }
 
   getAllRentals = () => {
-    axios.get('https://proper-t-express.herokuapp.com/rentals', {
+    axios.get('http://localhost:3001/rentals', {
       headers: { 'x-access-token': sessionStorage.getItem('jwt_token') },
     }).then((response) => {
       this.setState({ rentals: response.data });

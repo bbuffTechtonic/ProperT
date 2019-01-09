@@ -11,7 +11,7 @@ import defaultImage from '../../images/images.png';
 class IndivPropertyDetails extends Component {
   constructor(props) {
     super(props);
-    this.url = 'https://proper-t-express.herokuapp.com/rentals';
+    this.url = 'http://localhost:3001/rentals';
     this.state = {
       modal: false,
     };
