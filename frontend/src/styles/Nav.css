@@ -1,0 +1,8 @@
+#add-property-modal:hover, #nav-bar li:hover  {
+  cursor: pointer;
+}
+
+#dropdown-item:hover {
+  background-color: #343a40;
+  color: #ffffff;
+}

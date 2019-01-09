@@ -1,0 +1,30 @@
+input[type="checkbox"] {
+  -webkit-filter: brightness(70%) contrast(155%) hue-rotate(138deg);
+  filter: brightness(70%) contrast(155%) hue-rotate(138deg);
+}
+
+#expense-row:hover {
+  color: green;
+}
+
+.thumbnail:hover {
+  background-size:  100% 100%;
+  transform:scale(6,6);
+  transform-origin:center;
+  transition: all 0.5s ease-in-out;
+  z-index: 999;
+}
+
+#expense-body {
+  height: 332px;
+  overflow: scroll;
+  display: block;
+}
+
+#expense-head {
+  background-color: #343a40;
+  color: white;
+  height: 49px;
+  z-index: 0;
+  position: relative;
+}

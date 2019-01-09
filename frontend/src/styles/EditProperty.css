@@ -1,0 +1,13 @@
+#edit-prop-modal-header {
+  background-color: #343a40;
+  color: white;
+}
+
+span {
+  color: #343a40;
+  display: none;
+}
+
+#submit-edit-property {
+  margin-right: 10px;
+}

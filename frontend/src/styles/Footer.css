@@ -1,0 +1,13 @@
+#footer {
+  height: 70px;
+  background-color: #343a40;
+  margin-top: 40px;
+}
+
+#copyright-text {
+  padding-top: 20px;
+}
+
+.footer-links {
+  padding-top: 5px;
+}

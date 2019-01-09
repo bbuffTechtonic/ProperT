@@ -1,0 +1,13 @@
+#add-prop-modal-header {
+  background-color: #343a40;
+  color: white;
+}
+
+span {
+  color: #343a40;
+  display: none;
+}
+
+#submit-new-prop-button {
+  margin-right: 10px;
+}
